@@ -49,7 +49,10 @@ public class KSToken : UIControl {
    
    /// default is false. If set to true, token can not be deleted
    public var sticky = false
-   
+
+   /// default is UIFont.systemFontOfSize(14)
+   public var tokenFont = UIFont.systemFontOfSize(14)
+
    /// Token Title color
    public var tokenTextColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
    
@@ -148,7 +151,7 @@ public class KSToken : UIControl {
       rectanglePath.fill()
       
       var paddingX: CGFloat = 0.0
-      var font = UIFont.systemFontOfSize(14)
+      var font = tokenFont
       var tokenField: KSTokenField? {
          return superview! as? KSTokenField
       }
