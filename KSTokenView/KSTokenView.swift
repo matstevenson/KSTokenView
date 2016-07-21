@@ -340,7 +340,14 @@ public class KSTokenView: UIView {
             _updateTokenField()
         }
     }
-   
+
+    /// default is UIKeyboardType.Default
+    public var keyboardType: UIKeyboardType = UIKeyboardType.Default {
+        didSet {
+            _updateTokenField()
+        }
+    }
+
    /// default is .Rounded, creates rounded corner
    public var style: KSTokenViewStyle = .Rounded {
       didSet(newValue) {

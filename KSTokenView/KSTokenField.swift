@@ -119,6 +119,7 @@ public class KSTokenField: UITextField {
             _separatorText = tokenView!.separatorText
             _removesTokensOnEndEditing = tokenView!.removesTokensOnEndEditing
             _descriptionText = tokenView!.descriptionText
+            keyboardType = tokenView!.keyboardType
             placeHolderColor = tokenView!.placeholderColor
             promptTextColor = tokenView!.promptColor
             _setPromptText(tokenView!.promptText)
@@ -163,6 +164,7 @@ public class KSTokenField: UITextField {
       autocapitalizationType = UITextAutocapitalizationType.None
       contentVerticalAlignment = UIControlContentVerticalAlignment.Top
       returnKeyType = UIReturnKeyType.Done
+      keyboardType = UIKeyboardType.Default
       text = KSTextEmpty
       backgroundColor = UIColor.whiteColor()
       clipsToBounds = true
