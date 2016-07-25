@@ -318,7 +318,7 @@ public class KSTokenField: UITextField {
       }
    }
    
-   
+
    //MARK: - Layout
    /*
    **************************** Layout ****************************
@@ -327,7 +327,7 @@ public class KSTokenField: UITextField {
    /**
    Untokenzies the layout
    */
-   func untokenize() {
+    func untokenize() {
       if (!_removesTokensOnEndEditing) {
          return
       }
@@ -343,12 +343,12 @@ public class KSTokenField: UITextField {
    /**
    Tokenizes the layout
    */
-   func tokenize() {
+   func tokenize(shouldUpdateText: Bool = true) {
       _state = .Opened
       for token: KSToken in tokens {
          _insertToken(token, shouldLayout: false)
       }
-      updateLayout()
+      updateLayout(shouldUpdateText)
    }
    
    /**
@@ -562,7 +562,7 @@ public class KSTokenField: UITextField {
       case .Opened:
          text = KSTextEmpty
          break
-         
+
       case .Closed:
          if tokens.count == 0 {
             text = KSTextEmpty
