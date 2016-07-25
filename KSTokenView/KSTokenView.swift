@@ -273,7 +273,16 @@ public class KSTokenView: UIView {
          }
       }
    }
-   
+
+   /// default is true. When false, the token field will not blank or tokenize when editing begins.
+   public var tokenizeOnDidBeginEditing: Bool = true {
+      didSet {
+         if (oldValue != tokenizeOnDidBeginEditing) {
+            _updateTokenField()
+         }
+      }
+   }
+
    /// default is true. When resignFirstResponder is called tokens are removed and description is displayed.
    public var removesTokensOnEndEditing: Bool = true {
       didSet {
@@ -656,7 +665,9 @@ public class KSTokenView: UIView {
    //
    func tokenFieldDidBeginEditing(tokenField: KSTokenField) {
       delegate?.tokenViewDidBeginEditing?(self)
-      tokenField.tokenize()
+      if tokenizeOnDidBeginEditing {
+         tokenField.tokenize()
+      }
       if (minimumCharactersToSearch == 0) {
          _startSearchWithString("")
       }
