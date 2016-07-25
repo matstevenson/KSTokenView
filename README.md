@@ -33,7 +33,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'KSTokenView', '~> 2.4'
-``` 
+```
 
 2. Install the pod(s) by running `pod install`.
 
@@ -135,6 +135,9 @@ tokenView.seperatorText = ", "
 /// default is 0.25.
 tokenView.animateDuration = 0.25
 
+/// default is true. When false, the token field will not blank when editing begins.
+tokenView.blankTextFieldOnStartEditing = true
+
 /// default is true. When resignFirstResponder is called tokens are removed and description is displayed.
 tokenView.removesTokensOnEndEditing = true
 
@@ -165,4 +168,4 @@ tokenView.tokenizingCharacters = [","]
 See example projects for detail.
 
 ## License
-This code is distributed under the terms and conditions of the [MIT license](LICENSE). 
+This code is distributed under the terms and conditions of the [MIT license](LICENSE).
