@@ -351,7 +351,7 @@ open class KSTokenView: UIView {
     }
 
     /// default is UIKeyboardType.Default
-    public var keyboardType: UIKeyboardType = UIKeyboardType.Default {
+    public var keyboardType: UIKeyboardType = UIKeyboardType.default {
         didSet {
             _updateTokenField()
         }
@@ -665,7 +665,7 @@ open class KSTokenView: UIView {
    //
    func tokenFieldDidBeginEditing(_ tokenField: KSTokenField) {
       delegate?.tokenViewDidBeginEditing?(self)
-      tokenField.tokenize(blankTextFieldOnStartEditing)
+    tokenField.tokenize(shouldUpdateText: blankTextFieldOnStartEditing)
 
       if (minimumCharactersToSearch == 0) {
          _startSearchWithString("")
