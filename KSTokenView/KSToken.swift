@@ -51,7 +51,7 @@ open class KSToken : UIControl {
    open var sticky = false
    
    /// default is UIFont.systemFontOfSize(14)
-    open var tokenFont = UIFont.systemFontOfSize(ofSize: 14)
+    open var tokenFont = UIFont.systemFont(ofSize: 14)
 
    /// Token Title color
    open var tokenTextColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
