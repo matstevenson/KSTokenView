@@ -18,8 +18,9 @@ Click [here](https://appetize.io/app/0kzy34tyg761punebrcc1x556w) for Live Previe
 
 ## Requirements
 
-- iOS 7 and above.
-- Xcode 7 and above
+- iOS 9 and above.
+- Xcode 8 and above
+- Swift 3 and above **(For Swift 2.x use branch develop/Swift2.3)**
 
 
 ## Adding KSTokenView to your project
@@ -32,8 +33,13 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
+<<<<<<< HEAD
 pod 'KSTokenView', '~> 2.4'
 ```
+=======
+pod 'KSTokenView', '~> 3.0'
+``` 
+>>>>>>> upstreamMaster
 
 2. Install the pod(s) by running `pod install`.
 
